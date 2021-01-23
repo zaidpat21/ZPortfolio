@@ -568,6 +568,12 @@ input, textarea, select
     display: inline-block;
 }
 
+#blurry-text
+{
+    text-shadow: 0 0 8px black;
+    color: transparent;
+}
+
 .about .about-content .personal-info .buttons
 {
     margin-top: 30px;
@@ -1409,6 +1415,12 @@ body.dark .shadow-dark
 {
     -webkit-box-shadow: none;
     box-shadow: none;
+}
+
+body.dark #blurry-text
+{
+    text-shadow: 0 0 8px white;
+    color: transparent;
 }
 
 /**************************************** Dark Body Ends ****************************************/
