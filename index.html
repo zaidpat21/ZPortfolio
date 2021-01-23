@@ -80,13 +80,13 @@
                         <div class="intro">
                             <img src="images/Zaid.jpg" alt="profile" class="shadow-dark">
                             <h1>Zaid Pathan</h1>
-                            <p>I'm a full stack developer</p>
+                            <p>I'm <span class="typing"></span></p>
 
                             <!-- Social Links Starts -->
                             <div class="social-links">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://www.facebook.com/i.zp.14"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/i_zp14/"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/zaid-pathan-a74957147"><i class="fa fa-linkedin"></i></a>
                             </div>
                             <!-- Social Links Ends -->
                         </div>
@@ -111,8 +111,8 @@
                             <div class="about-content padd-15">
                                 <div class="row">
                                     <div class="about-text padd-15">
-                                        <h3>I'm Zaid Pathan, a <span>full stack developer</span></h3>
-                                        <p>Hi! I am a full stack Java developer. I am very passionate and dedicated to my work. With about 2.5 years experience as a professional Java developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration.</p>
+                                        <h3>Hi I'm Zaid Pathan</h3>
+                                        <p>A guy from Pune City working as a Senior Software Engineer in Newgen Software Technologies Limited at Mumbai. I joined this company as a campus recruit and has an experience of 2 <sup>1</sup>/<sub>2</sub> years till date in Core Java, JSPs, Weblogic, Oracle and Newgen Products like Omniflow v10.3, OmniDocs, iBPS v4.0, etc. I am very passionate and dedicated to my work. I have acquired the skills and knowledge necessary to make projects, a success! I enjoy every step of the design process, straight from Planning, Discussion and Prototyping to Development, Deployment and Maintainence.</p>
                                     </div>
                                 </div>
 
@@ -155,7 +155,7 @@
 
                                         <div class="row">
                                             <div class="buttons padd-15">
-                                                <a href="#" class="btn">Download Resume</a>
+                                                <a href="resume/Zaid Resume.pdf" class="btn">Download Resume</a>
                                                 <a href="#contact" data-section-index="1" class="btn hire-me">Hire Me</a>
                                             </div>
                                         </div>
@@ -741,6 +741,16 @@
         </div>
         <!-- Live Style Switcher Ends -->
 
+        <!-- Typed JS Starts -->
+        <script src="js/typed.js"></script>
+        <!-- Typed JS Ends -->
+
+        <!-- Send Mail Starts -->
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+        
+        <!-- Send Mail Ends -->
+
         <!-- Template JS Starts -->
         <script src="js/script.js"></script>
         <!-- Template JS Ends -->
@@ -748,5 +758,17 @@
         <!-- Live Style JS Starts -->
         <script src="js/styleSwitcher.js"></script>
         <!-- Live Style JS Ends -->
+
+        <script>
+            var typed = new Typed('.typing', {
+                strings: [
+                "a Java Developer",
+                    "working as a Senior Software Engineer"
+                ],
+                typeSpeed: 50,
+                backSpeed: 50,
+                loop: true
+                });
+        </script>
     </body>
 </html>
