@@ -50,6 +50,52 @@
                 }
             }
         </script>
+
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+        <script type="text/javascript">
+            function sendEmail()
+            {
+                var contactName     = document.getElementById("contactName").value;
+                var contactEmail    = document.getElementById("contactEmail").value;
+                var contactSubject  = document.getElementById("contactSubject").value;
+                var contactBody     = document.getElementById("contactBody").value;
+
+                var Body = "";
+                
+                if(contactName === "")
+                {
+                    alert("Please enter your name");
+                }
+                else if(contactEmail === "")
+                {
+                    alert("Please enter your email address");
+                }
+                else if(contactSubject === "")
+                {
+                    alert("Please enter subject");
+                }
+                else if(contactBody === "")
+                {
+                    alert("Please enter your message");
+                }
+                else
+                {
+                    Body = "<p style = 'font-family: ''Montserrat'', sans-serif;'> <span style = 'font-size: 20px;'>Hi Zaid, <br>You've received a message from " + contactName + ".</span><br><br><span style = 'font-size: 18px;'>The following are their details: </span><br><span style = 'font-size: 18px'><strong>Name: </strong>" + contactName + "<br><strong>Email: </strong>" + contactEmail + "<br><strong>Subject: </strong>" + contactSubject + "<br><strong>Message: </strong>" + contactBody + "</span><br><br><span style = 'font-size: 16px'>Zaid, you can reach out " + contactName + " on their mentioned email address</span><br><br><span style = 'font-size: 14px'>**This is an auto-generated email. Please do not reply on this. <br>You can reach out the actual sender at <i>" + contactEmail + "</i></span><br><br><span style = 'font-size: 20px;'><strong><i>Yours truly,<br>Portfolio Manager.</i></strong></span></p>";
+
+                    Email.send({
+                        SecureToken : "e338ae1d-ce53-4868-b6be-df1dfce4ee19",
+                        To : 'zaidpat21@gmail.com',
+                        From : "zaidpathanportfolio@gmail.com",
+                        Subject : contactName + " sent you a message from your portfilio",
+                        Body : Body
+                    }).then(
+                    message => alert("Thank You for connecting.. Your mail has been sent to Zaid Pathan successfully!")
+                    );
+                }
+            }
+        </script>
     </head>
 
     <body oncontextmenu="return false;">
@@ -652,19 +698,19 @@
                             
                         <!-- Contact Form Starts -->
                         <div class="row padd-15">
-                            <form method="POST" action="" class="contact-form padd-15">
+                            <form action="javascript:sendEmail()" method="post" class="contact-form padd-15">
                                 <div class="row">
                                     <!-- Name -->
                                     <div class="form-item col-6 padd-15">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Name*">
+                                            <input type="text" class="form-control" id="contactName" placeholder="Name*">
                                         </div>
                                     </div>
 
                                     <!-- Email -->
                                     <div class="form-item col-6 padd-15">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Email*">
+                                            <input type="text" class="form-control" id="contactEmail" placeholder="Email*">
                                         </div>
                                     </div>
                                 </div>
@@ -673,7 +719,7 @@
                                 <div class="row">
                                     <div class="form-item col-12 padd-15">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Subject*">
+                                            <input type="text" class="form-control" id="contactSubject" placeholder="Subject*">
                                         </div>
                                     </div>
                                 </div>
@@ -682,7 +728,7 @@
                                 <div class="row">
                                     <div class="form-item col-12 padd-15">
                                         <div class="form-group">
-                                            <textarea class="form-control" placeholder="Your Message.."></textarea>
+                                            <textarea class="form-control" id="contactBody" placeholder="Your Message.."></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -768,12 +814,6 @@
         <!-- Typed JS Starts -->
         <script src="js/typed.js"></script>
         <!-- Typed JS Ends -->
-
-        <!-- Send Mail Starts -->
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
-        
-        <!-- Send Mail Ends -->
 
         <!-- Template JS Starts -->
         <script src="js/script.js"></script>
