@@ -23,6 +23,28 @@ body
     user-select: none;
 }
 
+.head 
+{
+    font-size: 16px!important;
+    font-weight: 500;
+}
+
+.count 
+{
+    font-size: 25px!important;
+    font-weight: 600;
+}
+
+.counter 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #302e4d;
+    padding: 10px;
+}
+
 ::before,::after
 {
     box-sizing: border-box;
@@ -1385,7 +1407,8 @@ body.dark .about .about-content .about-text h3,
 body.dark .section-title h2,
 body.dark .home .intro h1,
 body.dark .aside .logo a,
-body.dark .aside .nav li a
+body.dark .aside .nav li a,
+body.dark .head
 {
     color: #fff;
 }
