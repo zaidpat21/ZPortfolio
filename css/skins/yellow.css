@@ -48,3 +48,8 @@ body.dark .portfolio .portfolio-filter button.active,
 {
     border-color: #ffb400;
 }
+
+.count 
+{
+    color: #ffb400;
+}
