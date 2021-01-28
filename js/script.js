@@ -5,6 +5,15 @@ window.addEventListener("load", function(){
     }, 1000);
 })
 
+function updateCounter() {
+    fetch('https://api.countapi.xyz/update/zaidpathanportfolio/zpportfolio/?amount=1')
+        .then(res => res.json())
+        .then(data => counterElement.innerHTML = data.value)
+}
+
+updateCounter()
+counterElement = document.getElementsByClassName('count')[0];
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Portfolio Item Filter ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 const filterContainer  = document.querySelector(".portfolio-filter"),
